@@ -1,0 +1,26 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+  <head>
+    <title>domByTagNames.html</title>
+    <script>
+      function changePara() {
+        var parr = document.getElementsByTagName("p");
+        for (i = 0; i < parr.length; i++) {
+          parr[i].style.textAlign = "center";
+          parr[i].style.backgroundColor = "yellow";
+          parr[i].style.color = "red";
+          parr[i].firstChild.nodeValue = "New Content :" + (i + 1);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p>Learning DOM</p>
+
+    <p>Learning Javascript</p>
+
+    <p>Learning DOM HTML</p>
+
+    <button onclick="changePara()">Change para</button>
+  </body>
+</html>

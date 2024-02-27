@@ -1,0 +1,210 @@
+Events captured :-
+1)onblur-An element loses focus
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HTML DOM Events</h1>
+<h2>The blur Event</h2>
+
+Enter your name: <input type="text" id="fname" onblur="myFunction()">
+
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+<script>
+function myFunction() {
+  let x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+</body>
+</html>
+
+----------------------------------------------------
+2)onfocus	   An element gets focus
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HTML DOM Events</h1>
+<h2>The focus Event</h2>
+
+Enter your name: <input type="text" onfocus="myFunction(this)">
+
+<p>When the input field gets focus, a function changes the background-color.</p>
+
+<script>
+function myFunction(x) {
+  x.style.background = "yellow";
+}
+</script>
+
+</body>
+</html>
+
+---------------------------------------------------------
+3)onchange() event
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Assign an "onchange" event to an input element.</p>
+
+Enter your name: <input type="text" id="fname" onchange="myFunction()">
+
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+
+</body>
+</html>
+---------------------------------------------------------
+4)onclick() event
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HTML DOM Events</h1>
+<h2>The onclick Event</h2>
+
+<p>The onclick event triggers a function when an element is clicked on.</p>
+<p>Click to trigger a function that will output "Hello World":</p>
+
+<button onclick="myFunction()">Click me</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";
+}
+</script>
+
+</body>
+</html>
+----------------------------------------------------------
+5)oncopy()
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HTML DOM Events</h1>
+<h2>The oncopy Event</h2>
+
+<input type="text" oncopy="myFunction()" value="Try to copy me">
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "You copied text!"
+}
+</script>
+
+</body>
+</html>
+-------------------------------------------------------------
+6)ondblclick()
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HTML DOM Events</h1>
+<h2>The ondblclick Event</h2>
+
+<p ondblclick="myFunction()">Double-click this paragraph to trigger a function.</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML += "Hello World ";
+}
+</script>
+
+</body>
+</html>
+--------------------------------------------------------------
+7)onerror()
+<!DOCTYPE html>
+<html>
+<body>
+
+<img src="image.gif" onerror="myFunction()">
+
+<p>A function is triggered if an error occurs when loading the image. The function shows an alert box with a text.
+In this example we refer to an image that does not exist, therefore the onerror event occurs.</p>
+
+<script>
+function myFunction() {
+  alert('The image could not be loaded.');
+}
+</script>
+
+</body>
+</html>
+-------------------------------------------------------------
+8)oninput()
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HTML DOM Events</h1>
+<h2>The oninput Event</h2>
+
+<p>Write something in the text field to trigger a function.</p>
+
+<input type="text" id="myInput" oninput="myFunction()">
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let text = document.getElementById("myInput").value;
+  document.getElementById("demo").innerHTML = "You wrote: " + text;
+}
+</script>
+
+</body>
+</html>
+
+-------------------------------------------------------------
+9)onload() 
+<!DOCTYPE html>
+<html>
+<body onload="myFunction()">
+<h1>HTML DOM Events</h1>
+<h2>The onload Event</h2>
+
+<script>
+function myFunction() {
+  alert("Page is loaded");
+}
+</script>
+
+</body>
+</html>
+-----------------------------------------------------------
+10)onsubmit()
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>When you submit the form, a function is triggered which alerts some text.</p>
+
+<form action="/action_page.php" onsubmit="myFunction()">
+  Enter name: <input type="text" name="fname">
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+function myFunction() {
+  alert("The form was submitted");
+}
+</script>
+
+</body>
+</html>
+------------------------------------------------------------
+

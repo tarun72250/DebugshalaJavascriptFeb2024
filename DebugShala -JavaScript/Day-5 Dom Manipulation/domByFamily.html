@@ -1,0 +1,26 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+  <head>
+    <title>domByFamily.html</title>
+    <script>
+      function getInfo() {
+        var child = document.getElementById("content").childNodes;
+        alert(child.length);
+        var str = "<table border=1px >";
+        for (var i = 0; i < child.length; i++) {
+          alert(child[i].nodeName + " : " + child[i].nodeType);
+        }
+        str = "</table>";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="content">
+      <h1>Learning DOM</h1>
+      <p>DOM allows to modify HTML page dynamically</p>
+      <a href="#"> More examples </a>
+      <br />
+      <button onclick="getInfo()">Get Content</button>
+    </div>
+  </body>
+</html>

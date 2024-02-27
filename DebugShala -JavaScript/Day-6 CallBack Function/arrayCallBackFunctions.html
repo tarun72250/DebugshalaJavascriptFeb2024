@@ -1,0 +1,88 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+  <head>
+    <title>array.html</title>
+    <script>
+      function compare(a, b) {
+        return b - a;
+      }
+
+      var arr = [10, 23, 42, 34, 12, 19, 3];
+      arr.sort(); //by default natural ordering 10,12,19,23,3,34,42 which is not correct
+      document.write("Natural Sorting :" + arr.toString()); //toString() method of array class.
+      arr.sort(compare); //3,10,12,19,23,34,42 now it is correct.
+      document.write("</br>Numeric Sorting :" + arr.toString()); //toString() method of array class.
+      //Ques:- what to do for descending sort
+      //function compare(a, b) {
+      //return  b-a;
+      //}
+
+      //Ques:- Create anonoymous fn like
+      arr.sort(function (a, b) {
+        return a - b;
+      });
+      document.write(
+        "</br>Numeric Sorting using Anonymous fn :" + arr.toString()
+      ); //toString() method of array class.
+
+      //Ques:- Create Arrow fn like
+      arr.sort((a, b) => {
+        a - b;
+      });
+      document.write("</br>Numeric Sorting using Arrow fn :" + arr.toString());
+
+      document.write(
+        "</br>************************************************************</br>"
+      );
+      //iteration:-
+      //arr.forEach(myiter); // So here we define that myiter and iterate through this
+      //I will print this through bulleted list
+      document.write("<ol>");
+      //here we Anonymous fn for iterarte this
+      //   arr.forEach(function (e) {
+      //     document.write("<li>" + e + "</li>");
+      //   });
+      //else we Arrow fn
+      arr.forEach((e) => {
+        document.write("<li>" + e + "</li>");
+      });
+      document.write("</ol>");
+
+
+    
+      //mapping array elemets-map fn return array which u will store
+      //need :- I want to show sqaure of each and every element
+      var squares= arr.map((v)=>{return v*v});
+      var squares = arr.map(v => v * v);
+      document.write("</br>Squares array:" + squares.toString());
+
+
+      //reduce() array element , sum ,max ,min , avg , single value
+     var sum = arr.reduce((v,sum)=>{return v+sum})
+     document.write("</br>sum of the array using annonyomous fn:" + sum);
+
+     //do more compact form of that , return single value
+     var sum1 = arr.reduce((v,sum) =>v+sum)
+     document.write("</br>sum of the array using arrow fn:" + sum1);
+
+     //filter array-means all elements following particular condition or not, return array
+     //I want to find all even elements , check condition satisfied or not
+     var even = arr.filter((e)=>{return e%2==0});
+     document.write("</br>even elemets of the array using anonympous fn:" + even.toString());
+     //compact form habit of these guyz
+     var odd = arr.filter((e)=> e%2 !=0);
+     document.write("</br>odd elemets of the array using arrow fn:" + odd.toString());
+
+     //every()=return true if all elemets div by 2 , means return boolean value
+     var everyvar =  arr.every( (v) => v%2==0);
+     document.write("</br>every arrow fn:" + everyvar);
+
+     //some() return true if array ele follow this condition, means return boolean value
+     var somevar = arr.some((v)=>v%2==0);
+     document.write("</br>some arrow fn:" +somevar);
+
+     
+    </script>
+  </head>
+  <body></body>
+</html>
