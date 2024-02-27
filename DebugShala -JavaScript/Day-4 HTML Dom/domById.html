@@ -1,0 +1,34 @@
+<DOCTYPE html>
+  <html>
+    <head>
+      <title>domById.html</title>
+      <script>
+        function changeImg() {
+          var imgnode = document.getElementById("myimg");
+          s = imgnode.src; //here we save state src of img in s variable.
+          //var w = imgnode.width;become local space or omit using the var keyword.
+          w = imgnode.width;
+          h = imgnode.height;
+          imgnode.src = "Penguins.jpeg";
+          imgnode.width = "300";
+          imgnode.height = "300";
+        }
+        function originalImg() {
+          var imgnode = document.getElementById("myimg");
+          imgnode.src = s;
+          imgnode.height = h;
+          imgnode.width = w;
+        }
+      </script>
+    </head>
+    <body>
+      <img
+        src="Jellyfish.jpg"
+        height="100px"
+        width="100px"
+        id="myimg"
+        onmouseover="changeImg()"
+        onmouseout="originalImg()" />
+    </body>
+  </html>
+</DOCTYPE>

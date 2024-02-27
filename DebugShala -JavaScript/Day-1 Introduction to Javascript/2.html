@@ -1,0 +1,108 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      // "use strict";// if we use this strict mode these will tell me about that variable which are not defined at declaration. like remove var from n=10;
+      a = 10;
+      b = 20;
+      c = "Tarun";
+      d = false;
+      a = 12;
+
+      document.write("</br> a :" + a);
+      document.write("</br> b :" + b);
+      document.write("</br> c :" + c);
+
+      //typeof() function
+      document.write("</br> typeof (a)  :" + typeof a);
+      document.write("</br> typeof (b)  :" + typeof b);
+      document.write("</br> typeof (c) :" + typeof c);
+
+      //Arithematic operator
+      document.write("</br> Addition (a+b) :" + (a + b));
+      document.write("</br> Subtraction (a+b) :" + (a + b));
+      document.write("</br> Multiplication (a+b) :" + (a + b));
+      document.write("</br> Division (a+b) :" + (a + b));
+      document.write("</br> Modulo (a+b) :" + (a + b));
+
+      //Object declaration
+      document.write("</br>");
+      var myobj = {
+        id: 11,
+        name: "tarun",
+      };
+      document.write("</br> object type-" + myobj.id + " : " + myobj.name);
+      document.write("</br>typeof object : " + typeof myobj);
+
+      var myobj1 = { id: 101, name: "tarun", salary: 20000 };
+      document.write(
+        "<br/> object type:" +
+          myobj1.id +
+          " : " +
+          myobj1.name +
+          " : " +
+          myobj1.salary
+      );
+
+      document.write("</br>");
+      var msg = "Tarun";
+      var msg1 = "Mahesh";
+      var msg2 = `anup`;
+      var msg3 = "prashant";
+      var msg4 = "prateek";
+      document.write(
+        "</br>Names:" +
+          msg +
+          " : " +
+          msg1 +
+          " : " +
+          msg2 +
+          " : " +
+          msg3 +
+          " : " +
+          msg4 +
+          " : " +
+          msg5
+      );
+      document.write("</br>typeof msg :" + typeof msg);
+
+      arr = [1, 2, 3, 4, 5]; //instance , state
+      document.write("</br> typeof (arr) :" + typeof arr); //array in js is object
+
+      //diff btw let and var
+      //redeclartion is allowed in var
+      var num;
+      document.write("<br/> typeof num :" + num);
+
+      var flag = true;
+      //let flag=false;  // generate error
+      document.write("<br/> typeof flag: " + flag);
+
+      {
+        var a = 10;
+        let b = 20;
+        document.write("<br/>inside block -a :" + a);
+        document.write("<br/>inside block -b :" + b);
+      }
+      document.write("<br/> outside block -a :" + a); //var becomes global
+      //document.write("<br/> outside block -b :"+b);//using let cant defined out of block
+
+      //string declaration
+      var str1 = "tarun";
+      var str2 = "rathore";
+      document.write("</br> str1 :" + str1);
+      document.write("</br> str2 :" + str2);
+      var str3 = str1 + str2;
+      document.write("</br> str3 :" + str3);
+      document.write("</br> str1 + str2 :" + str1 + str2);
+      document.write(`</br> Hello :${str1}`);
+
+      //== and === use
+      var n = 10;
+      var s = "10";
+      document.write("</br> (n==s) :" + (n == s)); //== check only value
+      document.write("</br> (n===s) :" + (n === s)); //=== check value as well as datatype
+    </script>
+  </head>
+  <body></body>
+</html>

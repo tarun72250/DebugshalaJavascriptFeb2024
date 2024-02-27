@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <script>
+        function dispTable(n)
+        {
+            var str ="<table border=1>";
+           // alert(n);
+           for(i=1 ; i<=10 ; i++)
+             {
+          
+                str +="<tr>";
+                str +="<td>";
+                str +=n +" * "+i+" = "+n*i;
+                str +="</td>";
+                str +="</tr>";
+           
+            }
+            str += "</table>";
+            document.getElementById("table").innerHTML=str;
+        }
+
+    </script>
+  </head>
+  <body>
+    <form>
+    Enter Number : <input type="number" name="num" /></br>
+    <input type="button" value="Display Table" onclick="dispTable(num.value)"/>
+    </form>
+    <div id="table"></div>
+  </body>
+</html>
