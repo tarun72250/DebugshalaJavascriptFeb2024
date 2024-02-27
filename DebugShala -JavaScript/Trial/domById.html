@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>domById</title>
+    <script>
+        function changeImg()
+        {
+            var imgnode = document.getElementById("myimg");
+            s = imgnode.src;
+            w = imgnode.width;
+            h = imgnode.height;
+            imgnode.src="Jellyfish.jpg";
+            imgnode.width="300";
+            imgnode.height="300"
+        }
+
+        function originalImg()
+        {
+            var imgnode = document.getElementById("myimg");
+            imgnode.src=s;
+            imgnode.width=w;
+            imgnode.height=h;
+        }
+    </script>
+</head>
+<body>
+    <img src="Penguins.jpeg" width="200" height="200" id="myimg" 
+     onmouseover="changeImg()"
+     onmouseout="originalImg()" />
+</body>
+</html>

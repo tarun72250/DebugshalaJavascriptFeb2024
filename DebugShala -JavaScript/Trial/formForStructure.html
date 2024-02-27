@@ -1,0 +1,33 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+  <head>
+    <title>forForStructure.html</title>
+    <script>
+      function addLink() {
+        //Requirement:- Add some Link, so we use anchor tag
+        var anode = document.createElement("a");
+        //<a> so some attribute is compulsory,
+        anode.setAttribute("href", "domById.html");
+        //now for my hyperlink , i should have the text for my textnode
+        var txtnode = document.createTextNode("Click Me");
+        //for adding a node u create that separate node and then u travel and manipulate it.
+        //I am appending the child txtnode at anode
+        anode.appendChild(txtnode); // anode will see at same page at child node of body
+        document.body.appendChild(anode);
+        //once this hyper link is ssen no longer button is useful so , I disable this button its my new requirement so for that i am remove that element
+        //appendChild   removeChild   replaceChild
+        var btNode = document.getElementById("btnNode");
+        document.body.removeChild(btNode);
+        //only visible hyperlink
+        //logic is same as you follow in Data Struture
+        //I am modifying the structure
+        //few node I am adding at dynamically , and few node are deleted at runtime dynamically
+      }
+
+      //att run time i am creating some thing at add it in my page
+    </script>
+  </head>
+  <body>
+    <button id="btnNode" onclick="addLink()">Add Link</button>
+  </body>
+</html>

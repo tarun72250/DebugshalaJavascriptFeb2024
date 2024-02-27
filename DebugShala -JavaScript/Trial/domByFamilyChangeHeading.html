@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+
+    <script>
+      function applyBorder() {
+        var bodyNode = document.body;
+        //alert(bodyNode.nodeName+" : "+bodyNode.nodeValue+" : "+bodyNode.nodeType);
+        var bodyChild = bodyNode.childNodes; //it is array which start from 0 and give the rray length in body element
+        // alert(bodyChild.length);
+        //lets iterarte through this
+        for (i = 0; i < bodyChild.length; i++) {
+          // alert(bodyChild[i].nodeName+" : "+bodyChild[i].nodeName+" : "+bodyChild[i].nodeType)
+          if (bodyChild[i].nodeType == 1) {
+            //i want to update only those nodes which is of type text
+            bodyChild[i].style.border = "2px solid red";
+
+            // image hyperlink and button are inline element
+            // h1 and p are blocl line element
+            //<br/> is element node
+            //so for this can I apply style -yes we can hw
+          }
+        }
+      }
+      //ques:-Click of button get generate one table content-Name of the tag and  content of tag
+      function getInfo() {
+        var child = document.getElementById("content").childNodes;
+        //alert(child.length);//25 include spaces as well
+        var str = "<table border=1>";
+        for (i = 0; i < child.length; i++) {
+          //alert(child[i].nodeName+" : "+child[i].nodeType);
+          if (child[i].nodeType == 1) {
+            //alert(child[i].nodeName+" : "+child[i].firstChild.nodeValue);
+            if (child[i].firstChild != null) {
+              str += "<tr>";
+              str += "<td>" + child[i].nodeName + "</td>";
+              str += "<td>" + child[i].firstChild.nodeValue + "</td>";
+              str += "</tr>";
+            }
+          }
+        }
+        str += "</table>";
+        document.getElementById("table").innerHTML = str;
+      }
+      //using css selector
+      function changeStyle() {
+        var nodes = document.querySelectorAll("h1,p");
+        for (var i = 0; i < nodes.length; i++) {
+          nodes[i].style.textDecoration = " overline ";
+          nodes[i].style.textAlign = "center";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="content">
+      <h1>Learning DOM</h1>
+      <br />
+      <p>DOM allows to modify HTML page dynamically</p>
+      <br />
+      <img src="Jellyfish.jpg" height="200" width="200" /> <br />
+      <a href="#"> More Details </a> <br />
+
+      <button onclick="applyBorder()">Apply Border</button> <br />
+      <button onclick="getInfo()">get Content of Table</button> <br />
+      <button onclick="changeStyle()">change Style of Heading</button> <br />
+    </div>
+    <div id="table"></div>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function displayTable(num) {
+        //alert(num);
+        var str = "";
+        var str = "<table border='1'>";
+        for (i = 1; i <= 10; i++) {
+          str += "<tr>";
+          str += "<td>";
+          str += num + " * " + i + " = " + num * i;
+          str += "</td>";
+          str += "</tr>";
+        }
+        str += "</table>";
+        //alert(str);
+        console.log(str);
+        document.getElementById("table").innerHTML = str;
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      Enter number : <input type="number" name="num" /></br>
+      <input
+        type="button"
+        value="Display Table"
+        onclick="displayTable(num.value)" />
+        <input
+        type="button"
+        value="Alert box msg"
+        onclick="alert('Clicked')" />
+    </form>
+    <div id="table"></div>
+  </body>
+</html>

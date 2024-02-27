@@ -1,0 +1,25 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function fact(n) {
+        var f = 1;
+        while (n > 0) {
+          f *= n;
+          n--;
+          document.getElementById("root").innerHTML=f;
+        }
+       // return f;
+       
+      }
+    </script>
+  </head>
+  <body>
+    <span id="root"></span>
+    <form>
+      Enter No : <input type="number" value="num" /> </br>
+      <input type="button" value='Clicked' onclick="fact(num.value)")"
+    </form>
+    <span id="root"></span>
+</body>
+</html>

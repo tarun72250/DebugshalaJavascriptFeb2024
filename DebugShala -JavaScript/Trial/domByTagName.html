@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>domById</title>
+    <script>
+      //so i will apply changing style on these 3 paragraph.
+      function changePara() {
+        var parr = document.getElementsByTagName("p");
+        //as these array i will iterate through these
+        for (i = 0; i < parr.length; i++) {
+          parr[i].style.color = "blue";
+          parr[i].style.backgroundColor = "yellow";
+          parr[i].style.textAlign = "center";
+          parr[i].firstChild.nodeValue = "New CONTENT: " + (i + 1); 
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p>This is simple para</p>
+
+    <p>This is simple para</p>
+
+    <p>This is simple para</p>
+
+    <button onclick="changePara()">Apply style on Paragraph</button>
+  </body>
+</html>
